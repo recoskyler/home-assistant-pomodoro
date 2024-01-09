@@ -1,7 +1,12 @@
-from dateutil import parser as date_parser
-from datetime import timedelta
+"""
+Prints the calculated hours.
+"""
 
-def printHours(working_hours, short_breaks, long_breaks):
+def print_hours(working_hours, short_breaks, long_breaks):
+    """
+    Prints the calculated hours.
+    """
+
     print('\nWorking hours:')
     for time in working_hours:
         print(time.strftime('%H:%M'))

@@ -1,7 +1,27 @@
-from dateutil import parser as date_parser
+"""
+Calculates the schedule of working hours, short breaks, and long breaks based on the given duration,
+short break duration, long break duration, total number of cycles, and starting time.
+"""
+
 from datetime import timedelta
 
-def calculateHours(duration, short_break, long_break, total, beginning):
+def calculate_hours(duration, short_break, long_break, total, beginning):
+    """
+    The function calculates the schedule of working hours, short breaks, and long breaks based on the
+    given duration, short break duration, long break duration, total number of cycles, and starting
+    time.
+
+    :param duration: The duration parameter represents the length of each working session in minutes
+    :param short_break: The parameter "short_break" represents the duration of a short break in minutes
+    :param long_break: The `long_break` parameter represents the duration of a long break in minutes
+    :param total: The "total" parameter represents the total number of pomodoros or work cycles you want
+    to complete. Each pomodoro consists of a work session followed by a short break, except after every
+    fourth pomodoro, there is a long break instead of a short break
+    :param beginning: The `beginning` parameter represents the starting time of the working hours. It
+    should be a `datetime` object that specifies the date and time when the working hours begin
+    :return: a list containing three lists: working_hours, short_breaks, and long_breaks.
+    """
+
     pomodoro_count = 0
     state = -1
     current_time = beginning
