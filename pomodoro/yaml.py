@@ -23,7 +23,7 @@ def generate_yaml(duration, time_list, name):
 
     for time in time_list:
         yaml_content = yaml_content + '  - platform: time\n'
-        yaml_content = yaml_content + '    at: "' + time.strftime('%H:%M') + '"\n'
+        yaml_content = yaml_content + '    at: "' + time.strftime('%H:%M:%S') + '"\n'
 
     yaml_content = yaml_content + '# Insert conditions and actions here\n'
 
