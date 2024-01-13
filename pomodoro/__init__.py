@@ -8,7 +8,7 @@ Functions:
 """
 
 from .calculator import calculate_hours
-from .printer import print_hours
+from .printer import print_hours, print_human_readable_hours
 from .yaml import output_yaml
 
-__all__ = ["calculate_hours", "print_hours", "output_yaml"]
+__all__ = ["calculate_hours", "print_hours", "output_yaml", "print_human_readable_hours"]

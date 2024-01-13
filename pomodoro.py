@@ -8,7 +8,7 @@ from argparse import ArgumentParser
 from dateutil import parser as date_parser
 from pomodoro.calculator import calculate_hours
 from pomodoro.yaml import output_yaml
-from pomodoro.printer import print_hours
+from pomodoro.printer import print_hours, print_human_readable_hours
 
 def parse_args():
     """
@@ -106,6 +106,7 @@ def main():
 
     if verbose:
         print_hours(working_hours, short_breaks, long_breaks)
+        print_human_readable_hours(working_hours, short_breaks, long_breaks)
 
     output_yaml(duration, working_hours, short_break, short_breaks, long_break, long_breaks)
 
