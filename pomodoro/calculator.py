@@ -70,3 +70,7 @@ def calculate_hours(duration, short_break, long_break, total, beginning):
             continue
 
     return [working_hours, short_breaks, long_breaks]
+
+def sortTimes(timesArray):
+    timesArray.sort(key=lambda x: x[0])
+    return timesArray
